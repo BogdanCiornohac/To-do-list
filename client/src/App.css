@@ -1,0 +1,47 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-td{
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #C9DBB2;
+  padding: 5px;
+  font-size: 20px;
+  box-shadow: 0 0.4rem #809c80;
+}
+.input-td:focus{
+  outline-color:#AAC8A7;
+}
+
+.input-container{
+  margin: 10px;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.layer1 {
+  background-image: url('./assets/blobi.svg');
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: js;
+    src: url('../assets/JosefinSans-VariableFont_wght.ttf');
+}
+
+.card {
+    font-family: js;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+    width:400px;
+    background-color: #E3F2C1;
+    border: 4px dashed #AAC8A7;
+    border-radius: 25px;
+    margin: 20px;
+    box-shadow: 0 0 0 10px #E3F2C1, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.icon{
+    background-color:#E3F2C1;
+    color: #718270;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    gap:50%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
