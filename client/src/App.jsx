@@ -41,6 +41,7 @@ function App() {
         });
     }
   };
+  
   return (
     <div className="container">
       <div className="input-container">
@@ -52,8 +53,9 @@ function App() {
         <button className="add-btn" onClick={handleSubmit}>Add ToDo</button>
       </div>
       <div className="card-container">
-        {typeof backendData.toDo === 'undefined' ? <p>Loading...</p> :
-          backendData.toDo.map((text, index) => <Card key={index} name={backendData.toDo[index].text} />)}
+        {typeof backendData.toDo === 'undefined' ? <p className="text">Loading data...</p> :
+          typeof backendData.toDo[0] === 'undefined' ? <p className="text">Nothing to do here :/</p> :
+            backendData.toDo.map((text, index) => <Card key={index} name={backendData.toDo[index].text} index={index} setData={setBackendData}/>)}
       </div>
       <div className='spacer layer1'></div>
     </div>
