@@ -1,0 +1,16 @@
+{
+    "toDo": [
+        {
+            "text": "lorem",
+            "done": false
+        },
+        {
+            "text": "loremMama",
+            "done": false
+        },
+        {
+            "text": "loremTata",
+            "done": false
+        }
+    ]
+}

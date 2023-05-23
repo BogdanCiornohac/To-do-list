@@ -1,34 +1,37 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+  gap: 20px;
 }
 
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.input-td{
+.input-td {
   width: 300px;
   height: 40px;
   border-radius: 10px;
-  border: none;
+  border: 2px #809c80 solid;
   background-color: #C9DBB2;
   padding: 5px;
   font-size: 20px;
   box-shadow: 0 0.4rem #809c80;
 }
-.input-td:focus{
-  outline-color:#AAC8A7;
+
+.input-td:focus {
+  outline-color: #AAC8A7;
 }
 
-.input-container{
-  margin: 10px;
+.input-container {
+  display: flex;
+  gap: 20px;
 }
 
 .spacer {
@@ -44,4 +47,28 @@
   position: fixed;
   bottom: 0;
   z-index: -1;
+}
+
+.add-btn {
+  background-color: #C9DBB2;
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px #809c80 solid;
+  color: gray;
+  cursor: pointer;
+  box-shadow: #809c80 0px 10px 0px 0px;
+  transition: all .3s ease;
+}
+
+.add-btn:hover {
+  box-shadow: #809c80 0px 7px 0px 0px;
+  transform: translateY(3px);
+}
+
+.add-btn:active {
+  box-shadow: #809c80 0px 0px 0px 0px;
+  transform: translateY(7px);
 }
