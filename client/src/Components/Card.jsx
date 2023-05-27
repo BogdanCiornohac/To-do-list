@@ -14,7 +14,26 @@ const Card = (props) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ind})
+            body: JSON.stringify({ index: ind })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          props.setData(data)
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+
+    const doneCard = (ind,text) => {
+        fetch('http://localhost:5000/api', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ index: ind, text: text })
         })
         .then(response => response.json())
         .then(data => {
@@ -28,9 +47,9 @@ const Card = (props) => {
 
     return (
         <div className="card">
-            {props.name}
+          <p className={props.done ? "strike" : ""}>{props.name}</p>
             <div className="buttons">
-                <MdDoneOutline className="icon" />
+                <MdDoneOutline className="icon" onClick={()=>{doneCard(props.index,props.name);console.log(props.index)}}/>
                 <BsTrash className="icon" onClick={()=>{deleteCard(props.index);console.log(props.index)}} />
             </div>
         </div>

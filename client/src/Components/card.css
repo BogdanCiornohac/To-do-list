@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     height: 175px;
-    width:400px;
+    width: 400px;
     background-color: #E3F2C1;
     border: 4px dashed #AAC8A7;
     border-radius: 25px;
@@ -18,22 +18,90 @@
     font-size: 20px;
     flex-direction: column;
     transition: all .3s ease;
+    animation: appear 0.5s;
+    overflow: hidden;
 }
 
-.icon{
-    background-color:#E3F2C1;
+.icon {
+    background-color: none;
     color: #718270;
     height: 30px;
     width: 30px;
     cursor: pointer;
+    transition: all .2s ease-in;
+    padding-bottom: 4px;
 }
 
-.buttons{
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.icon:active {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.buttons {
     display: flex;
-    gap:50%;
+    gap: 50%;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: flex-end;
-    
+}
+
+.line-tr {
+    text-decoration: line-through;
+    transition: all 1s ease;
+}
+
+@keyframes strike {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.strike {
+    position: relative;
+}
+
+.strike::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: calc(100% - 100px);
+    height: 2px;
+    transform: translateY(-50%);
+    background: black;
+    animation-name: strike;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }

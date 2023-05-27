@@ -55,7 +55,7 @@ function App() {
       <div className="card-container">
         {typeof backendData.toDo === 'undefined' ? <p className="text">Loading data...</p> :
           typeof backendData.toDo[0] === 'undefined' ? <p className="text">Nothing to do here :/</p> :
-            backendData.toDo.map((text, index) => <Card key={index} name={backendData.toDo[index].text} index={index} setData={setBackendData}/>)}
+            backendData.toDo.map((text, index) => <Card key={index} name={backendData.toDo[index].text} index={index} setData={setBackendData} done={backendData.toDo[index].done}/>)}
       </div>
       <div className='spacer layer1'></div>
     </div>
